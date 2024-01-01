@@ -1,0 +1,53 @@
+Full Stack
+- Backend
+- Frontend
+
+Backend
+- Http Servers   
+- Authentication
+- Databases
+- Middlewares
+
+Http Servers
+- Request Methods
+- URL Route
+- Query params Headers Body
+- Status Code
+- Resposne(HTML, JSON,Text)
+
+Client Server Model | Http Servers| Express
+
+
+=> In pre-internet days these machines couldn't communicate to each other
+                                 MIT  
+                                 Big Machine
+                        
+    Big Machine 
+      UCLA               
+                                  USC
+                                  Big Machine
+
+                    request,response
+client            <----------------------->            server
+(browser,mobile app,desktop app)
+
+
+URL Vs Domain name
+=>A URL is a complete web address sued to find a particular web page
+=> While the domain is the websites's name.
+
+HTTP Servers
+=>An HTTP server is a software that understands URLS(web addresses) and HTTP (the protocol your browser uses to view web pages) .An HTTP server can be accessed
+
+through the domain name of the websites it stores, and it delievrs the content of these hosted websites to end user's device
+
+NPM VS Node.js Vs Express
+
+=> Express is built on top of Node, so yes, Express adds more features while building apps. Node is just a Javascript environment with libraries to make it easy to write software, whereas Express extends Node specifically to add middleware, routing, and much more.
+
+ Node.js is a JavaScript runtime environment used for building server-side applications, while npm is a package manager (dependencies required for js code)that helps in managing and sharing reusable JavaScript code. They have different main functions and usage, but they are often used together in web development projects.
+
+
+Headers- a section of requests that's used to transfer metadata about the request and the desired response
+
+Cookies-cookies are small data that are stored on a vlient side and sent to the client along with server requests.Cookies have various functionality they can be used for maintaining sessions and adding user-specofic features in your web app

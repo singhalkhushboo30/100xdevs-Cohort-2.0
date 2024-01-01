@@ -1,0 +1,23 @@
+
+
+JavaScript  (default)
+- Synchronous
+-Single Threaded
+
+Execution Context
+-execute one line of code at a time
+
+-> console log-1                  Each operation waits for the previous one to complete before executing
+-> console log-2
+|
+Call Stack       Memory Heap
+
+*****************************************************************
+
+Blocking Code Vs Non- Blocking Code
+   |                             |
+   block the flow of program    does not block execution
+      |                               |
+Read file sync                  read file async
+
+file read-kernel(read the file we want to)- execution to program by kernel

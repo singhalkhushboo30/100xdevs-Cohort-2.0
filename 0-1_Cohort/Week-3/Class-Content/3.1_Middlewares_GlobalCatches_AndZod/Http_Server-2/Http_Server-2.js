@@ -47,3 +47,13 @@ app.get("/heart-check",userMiddleware,function(req,res){
 })
 
 app.listen(3000)
+
+//for post body parameters
+//app.use(express.json())
+
+//In case middleware has to be used is every function then we can use middleware this way instead of mentioning it in api
+// app.use(userMiddleware)
+// app.get("/heart-check",function(req,res){
+//     // do something with kidney here
+//     res.send("Your heart is healthy")
+// })

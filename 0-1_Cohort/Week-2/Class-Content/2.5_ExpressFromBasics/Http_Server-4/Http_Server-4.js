@@ -2,12 +2,8 @@ const express=require("express")
 const app=express()
 const port=3000
 
-const user=[{name:"John",
+const users=[{name:"John",
 kidneys:[{healthy:false}]}]
-
-app.get("/",function(req,res){
-
-})
 
 app.get("/",function(req,res){
     const johnKidneys=users[0].kidneys;
@@ -35,5 +31,52 @@ app.post("/",function(req,res){
     })
     res.json({mess:"Done"})
 })
+
+app.put("/",function(req,res){
+    for(let i=0;i<users[0].kidneys.length;i++){
+        users[0].kidneys[i].healthy=true
+        res.send("updated successfully")
+    }
+
+})
+
+app.get("/files/:filename",function(req,res){
+    const name=req.params.filename;
+    console.log(name)
+    res.json({})
+})
+
+//remove all the unhealthy kidneys
+app.delete("/",function(req,res){
+    // you should return a 411
+    //only if atleast one unhealthy kidney is tehre do this,else return 411
+   if(isThereAtleastOneUnhealthyKidney()){
+    const newKidneys=[]
+    for(let i=0;i<users[0].kidneys.length;i++){
+        if(users[0].kidneys[i].healthy){
+            newKidneys.push({
+                healthy:true
+            })
+
+        }
+    }
+    users[0].kidneys=newKidneys;
+    res.json({mess:"done"})
+   }else{
+    res.status(411).json({
+        msg:"You have no bad kidneys"
+    })
+   }
+})
+
+function isThereAtleastOneUnhealthyKidney(){
+    let atleastUnhealthyKidney=false
+    for(let i=0;i<users[0].kidneys.length;i++){
+        if(!users[0].kidneys[i].healthy){
+          atleastOneUnhealthyKidney=true
+        }
+    }
+    return atleastOneUnhealthyKidney
+}
 
 app.listen(port)

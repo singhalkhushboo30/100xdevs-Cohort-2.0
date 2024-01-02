@@ -6,7 +6,7 @@
 const fs=require("fs").promises
 
 async function writeToFile(){
-await fs.readFile("b.txt","utf8")
+ await fs.readFile("b.txt","utf8")
     await fs.writeFile("b.txt","test")
 }
 

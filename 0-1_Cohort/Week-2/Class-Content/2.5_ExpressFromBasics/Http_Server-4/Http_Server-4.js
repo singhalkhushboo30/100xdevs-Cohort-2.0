@@ -3,7 +3,7 @@ const port=3000
 const app=express()
 
 const users=[{name:"John",
-kidneys:[{"healthy:false"}]}]
+kidneys:[{healthy:false}]}]
 
 app.get("/",function(req,res){
     const johnKidneys=users[0].kidneys;

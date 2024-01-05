@@ -1,0 +1,13 @@
+<!--  In the component in a function we do have to return one element only so for that we can mention many elements inside one element say it 
+    <div></div>. As we have to return one element then we can return the empty emty tags <></> known as "Fragment" in react -->
+
+    <!-- 
+    Name of the component and function in component must start with capital letter and component should  be created with the extension depending on the bundler we are using \
+   like: we are using the bundler vite then componentNsme.jsx if creating normally then componentName.js -->
+
+<!-- when we are using bundler we have to use script tag in main index.html file while when we create react app with npx create-react-app it renders index.js to index.html with mentioning it explicitly
+when we run the app it is implicitly defined there as the "react-script" dependency is already there in the package.json when we create raect-app with npx create-react-app -->
+
+<!-- when we create react app we do get the app creation with very minimal configuration and properties -->
+
+<!-- <React.strictmode></React.strictmode>  is a raect property which we get by default -->

@@ -7,3 +7,94 @@ npm is for managing packages and dependencies in your project. It's like the man
 
 npx is for executing packages. It's like a quick way to run a package without installing it globally or cluttering up your project with unnecessary dependencies.
 
+Folder Structure
+________________________
+package.json(Entry point to react app)- 
+
+The package. json file is the heart of any Node project. It records important metadata about a project which is required before publishing to NPM, and also defines functional attributes of a project that npm uses to install dependencies, run scripts, and identify the entry point to our package.
+
+scripts- start the project and get it ready for production
+
+web-vitals - for app performance
+
+start-script- to run project
+npm start (start has exception, try to avoid it)/npm run start
+
+bild- npm run build (build bolder craeted)
+//build folder is served  to users when in production not source folders
+
+create-react-app -It is not used used bcz it is bulky so vite or parcel is being used nowdays
+
+
+the term "build" refers to the process of transforming source code and assets into a runnable or deployable form. The primary goal of the build process is to create an executable version of a software application or library. 
+
+*******************************************************************************************************************************8
+Explanation of key folders and files:
+
+node_modules/: This folder contains all the dependencies and packages installed by npm or yarn. You typically don't need to manually manage this folder.
+
+public/: This folder holds static assets that won't be processed by Webpack. The index.html file in this folder is the main HTML file for your React application.
+
+src/: This is the heart of your React application. It contains all the source code.
+
+assets/: Store images, fonts, or other static assets used in the project.
+
+components/: Reusable React components. Each component can have its folder with its own styles and tests.
+
+pages/: Top-level components for each page or route in your application.
+
+styles/: CSS or other styling files. You might use a preprocessor like Sass or Less if configured.
+
+App.js: The root component that gets rendered in index.js. It often contains the main structure of your application.
+
+index.js: The entry point of your React application. It renders the App component and injects it into the index.html file.
+
+.gitignore: Specifies files and directories that Git should ignore.
+
+package.json: Contains metadata about the project, including dependencies and scripts.
+              keep track of version we are using
+
+package-lock.json- keep track of updated version
+
+README.md: Project documentation.
+
+Configuration Files (Optional):
+
+.eslintrc.json: Configuration file for ESLint, a tool for identifying and reporting on patterns in JavaScript code.
+
+.prettierrc: Configuration file for Prettier, a code formatter.
+
+.babelrc: Configuration file for Babel, a JavaScript compiler.
+
+webpack.config.js: Configuration file for Webpack, a module bundler.
+**********************************************************************************
+
+Vite and Parcel are both modern bundlers/tools that simplify the development workflow for web applications. 
+
+*********************************************************************************
+// Bun- JS runtime
+
+***********************************************************************************
+A bundler is a tool used in web development to combine and package various assets, such as JavaScript, CSS, and images, into a more optimized and efficient format for deployment. 
+
+************************************************************************************
+he choice between using a bundler directly and tools like npx create-react-app depends on the complexity and requirements of your project. Here are some reasons why you might choose one over the other:
+
+Using a Bundler Directly:
+Custom Configuration:
+
+If you need a high degree of customization and control over your project's build process, a bundler like Webpack or Parcel allows you to configure various settings according to your specific needs.
+Advanced Features:
+
+Bundlers provide advanced features such as code splitting, dynamic imports, and fine-grained control over asset optimization. This is especially beneficial for larger and more complex projects.
+Integration with Other Tools:
+
+Bundlers can easily integrate with other development tools and processes, allowing you to tailor your build pipeline to specific requirements.
+Support for Different Frameworks:
+
+While create-react-app is tailored for React projects, using a bundler directly allows you to work with different frameworks or libraries if your project involves a mix of technologies.
+****************************************************************
+
+'package.json is a manually maintained configuration file, package-lock.json is an automatically generated file that provides a detailed, version-specific snapshot of the dependencies and their nested dependencies. Both files are essential for managing dependencies in Node.js projects, with package-lock.json aiding in the reproducibility of builds across different environments.
+
+******************************************************************

@@ -101,3 +101,6 @@ While create-react-app is tailored for React projects, using a bundler directly 
 'package.json is a manually maintained configuration file, package-lock.json is an automatically generated file that provides a detailed, version-specific snapshot of the dependencies and their nested dependencies. Both files are essential for managing dependencies in Node.js projects, with package-lock.json aiding in the reproducibility of builds across different environments.
 
 ******************************************************************
+robots.txt - search engine
+
+manifest.js - mobile devices

@@ -1,0 +1,9 @@
+npx create-react-app appname
+
+npx- manager
+create-react-app -utility/software
+
+npm is for managing packages and dependencies in your project. It's like the manager that keeps track of what your project needs.
+
+npx is for executing packages. It's like a quick way to run a package without installing it globally or cluttering up your project with unnecessary dependencies.
+

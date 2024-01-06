@@ -7,11 +7,20 @@ function App() {
 
   const [counter,setCounter]=useState(5)
 
-  const addValue=()=>{
-      setCounter(counter+1)  
+  const addValue = () => {
+    //counter = counter + 1
+    setCounter(prevCounter => prevCounter + 1)
+    setCounter(prevCounter => prevCounter + 1 )
+    setCounter(prevCounter => prevCounter + 1)
+    setCounter(prevCounter => prevCounter + 1)
+    //will not now because all setCounter(counter+1) will be taken in a batch and will be updated once because same changes are being made
+   // setCounter(counter+1) 
+    //setCounter(counter+1)
+    // setCounter will take a callback function
   }
 
-  const removeValue=()=>{
+
+  function removeValue(){
     if(counter>0){
       setCounter(counter-1)
     }

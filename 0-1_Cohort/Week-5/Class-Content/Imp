@@ -104,3 +104,5 @@ While create-react-app is tailored for React projects, using a bundler directly 
 robots.txt - search engine
 
 manifest.js - mobile devices
+
+props- makes code reusable

@@ -11,3 +11,7 @@ when we run the app it is implicitly defined there as the "react-script" depende
 <!-- when we create react app we do get the app creation with very minimal configuration and properties -->
 
 <!-- <React.strictmode></React.strictmode>  is a raect property which we get by default -->
+
+<!--Introducing a variable in component
+username="bdhfbrr"
+<h1>chai aur code | {username}</h1>                 {username}-evaluated expression-->

@@ -15,3 +15,6 @@ when we run the app it is implicitly defined there as the "react-script" depende
 <!--Introducing a variable in component
 username="bdhfbrr"
 <h1>chai aur code | {username}</h1>                 {username}-evaluated expression-->
+
+*****************
+React-Redux ->Redux Toolkit - rtx

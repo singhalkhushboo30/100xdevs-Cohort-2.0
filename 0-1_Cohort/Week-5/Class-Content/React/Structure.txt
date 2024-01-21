@@ -1,0 +1,225 @@
+My Food App structure will look like:
+
+-Nav
+ - Logo
+ - Home/About (Nav Items)
+ - Cart
+
+-Body
+-Restaurant List
+  - Restaurant Card
+     -Image
+     -Name
+     -Rating
+- Search bar
+
+-Footer
+  -Copyright
+  -Contact
+  -Links
+  -Address
+
+  Props- arguemnts to a function
+
+  Config Driven UI - Different UI for a different condition
+  Config-driven UI is a technique that allows you to create user interfaces based on a configuration file, such as JSON, or a TypeScript file
+   that defines the layout and content of the UI components. This can be useful for creating dynamic and customizable UIs without hard coding them.
+  
+
+  In react , we do use indexes for keys 
+
+
+  Never use hardcoded data in Components It must be kept in some other file known as utils.js,config.js,constants.js etc
+
+  There are two types of exports:
+1. default export (we can have two default export in a file)
+const resList=[];
+export degfault resList;
+
+2. Named export
+(In case of multiple things to be export we can use it)
+export const CDN_URL=" "
+export const resList=[];
+
+(Multiple export in a file)
+
+Import are of two types:
+1. Default Import
+import logo from "./...."
+
+2. Named Import
+import {CDN_URL} from "./utils/constants.jsx"
+
+export default Component
+import Component from "path"
+
+export const Component
+import {Component} from "path"
+
+Utility Software is a type of software that is designed to help users manage ,maintain and optimize their computer systems.
+perform spaecific tasks such as antivirus software, disk management tools, compression tools
+
+React Hooks
+----------------
+Normal JS Utility functions
+use state()- Super powerful state variables in react(It maintains theb state of component)
+this function gives state variable
+
+
+use Effect() 
+
+// Whenever a state variable updates/changes react re-renders the componenet
+
+
+
+
+Monolith Architecture(Big Bulky Project)-for this architecture a project used to contain everything
+like:
+DB connectivity
+APIs
+UI(JSP JAVA SERVLET PAGES) 
+Auth SMS
+In monolith architecture every developer whether it is backend or frontend all working on same project/ github repository
+
+Microservices(Separation of Concerns -Single Responsibility Principle) -
+Different services for diff jobs like UI service,Auth service,SMS service,Email notification service, Backend service, DB services etc
+(All these services combined together forms a big app)
+These services communicate to each depending on the use cases
+
+In microservices , every team works independently on their projects and have their own deployement cycle
+These services talk to each other through making call to diff URL
+In microservice we can diff tech stack for diff service.
+like DB in python, React-UI, Backend-Java, SMS-Golang
+
+# Every service works on their own ports like DB on 343, UI in 5173
+
+****************************8
+
+1. Loads -> APIs-> render (Our page is frozen for a certain time so that API can be executed successfully)
+2. Loads -> Render(Shimmer UI)->API ->re-Render  (Better Approach(gives better UI))
+(In react render/re-rendering cycle is very fast)
+
+*********************************
+useEffect()- a normal JS function contains callback functions and an array of dependencies
+this useEffect() is called as soon as the component gets rendered
+
+***************************8
+
+Shimmer UI - Till the time actual component/page is not loaded to UI it shows a fake page
+
+
+Whenever a state variable update,react triggers a reconciliation cycle(re-renders the component)
+
+**************************
+React Router
+
+npm install react-router-dom
+
+useRouteError(hook) - react-router-dom 
+
+{link} -component -react-router-dom //act as an anchor tag the diff is that it doesn't render the whole page
+
+***********************
+2 types routing in web apps
+-Client Side Routing  Client-side routing is the internal handling of a route inside of your JS file that is rendered to the front end (or client).
+-Server Side Routing -you make a call and a about component is loaded from about page is rendered from server side
+With server-side routing, a user clicks a link that requests a new page or new data from the server (another computer). And then new data or document is served to the user.
+
+SPAs- The page is come but the component gets changed as per need
+
+Dynamic Routing-Dynamic Routes are pages that allow you to add custom params to your URLs.
+
+********************88888
+Functional Componenet: function that returns some piece of JSX
+Class Component: JS Class that extends React.Component that has a render memthod which returns JSX
+
+Constructor- render- didMount
+
+In case of parent and child class component(
+  parent constructor - parent render- child constructor- child render-child did mount- parent did mount
+
+)
+
+for multiple child component
+
+ /*
+- Parent Constructor
+-Parent Render
+  -first child Constructor
+  -first child Render
+  -second child Constructor
+  -second child Render
+
+  <Dom updated - In a single batch>
+
+-First Child ComponentDidMount
+-Second Child ComponentDidMount
+-Parent ComponentDidMount
+
+*/
+
+/*
+Mounting-Mounting means putting elements into the DOM.
+constructor
+render (html with dummy data)
+componentDidMount()
+api call...
+
+Update- A component is updated whenever there is a change in the component's state or props.
+componentDidUpdate()   api,props
+render
+
+
+UnMount -he next phase in the lifecycle is when a component is removed from the DOM, or unmounting as React likes to call it.
+
+componentWillUnmount()
+
+
+*/
+
+
+********************
+In react we first renders the component then the data of the api call is filled inside component
+means re-rendering after api call is done (using useEffect())
+
+
+****************************
+SOLID Principle
+
+S: Single responsibility principle.
+O: Open–closed principle.
+L: Liskov substitution principle.
+I: Interface segregation principle.
+D: Dependency inversion principle
+
+The idea behind the SRP is that every class, module, or function in a program should have one responsibility/purpose in a program. As a commonly used definition, "every class should have only one reason to change".
+
+************************************8
+Hooks are reusable functions.
+
+When you have component logic that needs to be used by multiple components, we can extract that logic to a custom Hook.
+
+***************************
+ESLint is a tool for identifying and reporting on patterns found in ECMAScript/JavaScript code, with the goal of making code more consistent and avoiding .
+
+to add emoji in js file we use : windows key + ;
+
+*********************
+Make the app breakdown in smaller chunks because it is hard to process one single js with large loc
+Craeting small bundles(each bundle should have specific logic for a specific feature)
+
+To reduce bundle size with a large size app=(if no of components is 10-20 good to go with code splitting but if no of components keeps increasing it is a great way to optimize our app)
+//Dynamic Import
+//Chunking
+//Code Splitting
+//Lazy Loading -when our app home page will not load grocery page itself when we go to that link then it will open that
+//Dynamic Bundling
+//On demand loading
+
+************************************
+Styling our app
+raw css
+sass vs scss
+style components
+Frameworks/ library -ant design,chakra ui,bootstrap,material ui
+Tailwind CSS
